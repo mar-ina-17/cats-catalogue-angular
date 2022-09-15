@@ -1,0 +1,13 @@
+<div class="cardContainer">
+    <p-card class="cardClass" header="Welcome!">
+        <p>If you already have a registration, please proceed to the <button pButton class="p-button-link linkClass"
+                label="Login" [ngStyle]="{color:'var(--bluegray-500)'}" (click)="redirectToLogin()"></button>
+            , otherwise </p>
+        <div class="homeButtonsContainer">
+
+            <button pButton type="button" class="p-button-raised p-button-outlined p-button-rounded p-button-success"
+                label="Register" (click)="redirectToRegister()"></button>
+
+        </div>
+    </p-card>
+</div>

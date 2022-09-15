@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.cardContainer{
+    width: 27rem;
+    margin: auto;
+    .cardClass{
+        text-align: center;
+        position: relative;
+    }
+}
+
+.rowContainer{
+    margin-top: 10px;
+}
+
+.actionsButtonsContainer {
+    margin:10px;
+}

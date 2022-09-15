@@ -1,0 +1,13 @@
+.homeButtonsContainer{
+    width: 50%;
+    margin: auto;
+    button{
+        margin-right:4px;
+    }
+}
+.linkClass:active, .linkClass:focus{
+    box-shadow:none;
+}
+.linkClass{
+    padding:0px;
+}

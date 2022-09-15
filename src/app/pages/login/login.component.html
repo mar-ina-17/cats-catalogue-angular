@@ -1,0 +1,52 @@
+<div class="cardContainer">
+  <p-card>
+    <button
+      pButton
+      class="iconClass p-element p-ripple p-button-rounded p-button-text p-button p-component p-button-icon-only p-button-secondary"
+      icon="pi pi-home"
+      (click)="redirectToHome()"
+    ></button>
+    <div class="cardClass">
+      <form
+        [formGroup]="loginForm"
+        name="loginForm"
+        (ngSubmit)="login()"
+        (keyup)="errorMsg = ''"
+      >
+        <div class="rowContainer">
+          <input
+            formControlName="username"
+            name="username"
+            type="username"
+            autofocus
+            pInputText
+            placeholder="Enter your username"
+            required
+            ngModel
+          />
+        </div>
+        <div class="rowContainer">
+          <p-password
+            [feedback]="false"
+            [required]="true"
+            formControlName="password"
+            name="password"
+            placeholder="Enter your password"
+            ngModel
+          >
+          </p-password>
+        </div>
+        <div class="actionsButtonsContainer">
+          <button
+            pButton
+            [disabled]="!loginForm.valid"
+            label="Submit"
+            type="submit"
+            class="p-button-outlined p-button-rounded p-button-success"
+          ></button>
+        </div>
+        <span [ngStyle]="{ color: 'var(--red-600)' }">{{ errorMsg }}</span>
+      </form>
+    </div>
+  </p-card>
+</div>
