@@ -1,17 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
-.cardContainer{
-    width: 27rem;
-    margin: auto;
-    .cardClass{
-        text-align: center;
-        position: relative;
-    }
+.cardContainer {
+  width: 27rem;
+  margin: auto;
+  .cardClass {
+    text-align: center;
+    position: relative;
+  }
 }
 
-.rowContainer{
-    margin-top: 10px;
+.rowContainer {
+  margin-top: 10px;
 }
 
 .actionsButtonsContainer {
-    margin:10px;
+  margin: 10px;
+}
+
+html {
+  font-family: "Segoe UI";
+  font-weight: 700;
 }

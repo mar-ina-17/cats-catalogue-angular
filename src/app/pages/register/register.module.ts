@@ -5,8 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
-import {CardModule } from 'primeng/card';
-
+import { CardModule } from 'primeng/card';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
@@ -21,7 +20,7 @@ import { RegisterComponent } from './register.component';
     PasswordModule,
     ButtonModule,
     RegisterRoutingModule,
-    CardModule
+    CardModule,
   ],
 })
 export class RegisterModule {}

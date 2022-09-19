@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { UsersService } from '../../services/user/users.service';
+import { UsersService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,7 @@ import { UsersService } from '../../services/user/users.service';
 })
 export class RegisterComponent implements OnInit {
   public registerForm: FormGroup;
-  public errorMsg: string = '';
+  public message: string = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.maxLength(50)]],
       lastName: ['', [Validators.required, Validators.maxLength(50)]],
       phone: ['', [Validators.required, Validators.maxLength(10)]],
-      username: ['', [Validators.required, Validators.maxLength(250)]],
+      username: ['', [Validators.required, Validators.maxLength(20)]],
       password: ['', Validators.required],
     });
   }
@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
       this.usrService.setUser(this.registerForm.value);
       this.router.navigate(['/']);
     } else {
-      this.errorMsg = 'This user is already registered.';
+      this.message = 'This user is already registered.';
       this.registerForm.reset();
     }
   }

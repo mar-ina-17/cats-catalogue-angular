@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { User } from './users.class';
+
+import { User } from './user.class';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -18,6 +20,12 @@ export class UsersService {
 
   hasUserLogin(usrname: string, pass: string): boolean {
     return this.users.some(
+      (user) => user.username == usrname && user.password == pass
+    );
+  }
+
+  returnUser(usrname: string, pass: string): User {
+    return this.users.find(
       (user) => user.username == usrname && user.password == pass
     );
   }

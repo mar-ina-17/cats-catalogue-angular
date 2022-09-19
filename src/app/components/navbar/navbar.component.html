@@ -1,0 +1,31 @@
+<p-menubar>
+  <ng-template pTemplate="end">
+    <button
+      *ngIf="showActiveUserButtons"
+      type="button"
+      pButton
+      label="Login"
+      icon="pi pi-sign-in"
+      class="p-button-sm p-button-text p-button-secondary"
+      (click)="redirectToLogin()"
+    ></button>
+    <button
+      *ngIf="showActiveUserButtons"
+      type="button"
+      pButton
+      label="Register"
+      class="p-button-sm p-button-rounded p-button-success"
+      (click)="redirectToRegister()"
+    ></button>
+
+    <button
+      *ngIf="!showActiveUserButtons"
+      type="button"
+      pButton
+      label="Logout"
+      icon="pi pi-sign-out"
+      class="p-button-sm p-button-rounded p-button-outlined p-button-success"
+      (click)="logOut()"
+    ></button>
+  </ng-template>
+</p-menubar>

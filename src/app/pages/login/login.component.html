@@ -11,7 +11,7 @@
         [formGroup]="loginForm"
         name="loginForm"
         (ngSubmit)="login()"
-        (keyup)="errorMsg = ''"
+        (keyup)="message = ''"
       >
         <div class="rowContainer">
           <input
@@ -22,7 +22,6 @@
             pInputText
             placeholder="Enter your username"
             required
-            ngModel
           />
         </div>
         <div class="rowContainer">
@@ -32,7 +31,6 @@
             formControlName="password"
             name="password"
             placeholder="Enter your password"
-            ngModel
           >
           </p-password>
         </div>
@@ -45,7 +43,7 @@
             class="p-button-outlined p-button-rounded p-button-success"
           ></button>
         </div>
-        <span [ngStyle]="{ color: 'var(--red-600)' }">{{ errorMsg }}</span>
+        <span [ngStyle]="{ color: 'var(--red-600)' }">{{ message }}</span>
       </form>
     </div>
   </p-card>

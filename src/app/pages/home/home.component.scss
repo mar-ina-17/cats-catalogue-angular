@@ -1,13 +1,33 @@
-.homeButtonsContainer{
-    width: 50%;
-    margin: auto;
-    button{
-        margin-right:4px;
-    }
+.homeButtonsContainer {
+  width: 50%;
+  margin: auto;
+  button {
+    margin-right: 4px;
+  }
 }
-.linkClass:active, .linkClass:focus{
-    box-shadow:none;
+.linkClass:active,
+.linkClass:focus {
+  box-shadow: none;
 }
-.linkClass{
-    padding:0px;
+.linkClass {
+  padding: 0px;
+}
+
+.homeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#homeHeader {
+  font-size: 4.5em;
+  color: #333;
+}
+.homeText {
+  font-size: 1.5em;
+  color: #333;
+  #catSpan {
+    color: #22c55e;
+  }
 }

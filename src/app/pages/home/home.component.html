@@ -1,13 +1,11 @@
-<div class="cardContainer">
-    <p-card class="cardClass" header="Welcome!">
-        <p>If you already have a registration, please proceed to the <button pButton class="p-button-link linkClass"
-                label="Login" [ngStyle]="{color:'var(--bluegray-500)'}" (click)="redirectToLogin()"></button>
-            , otherwise </p>
-        <div class="homeButtonsContainer">
+<div>
+  <app-navbar></app-navbar>
 
-            <button pButton type="button" class="p-button-raised p-button-outlined p-button-rounded p-button-success"
-                label="Register" (click)="redirectToRegister()"></button>
-
-        </div>
-    </p-card>
+  <div class="homeContainer">
+    <span id="homeHeader">Wanna see some cats?</span>
+    <p class="homeText">
+      Go ahead and register if you don't have an account already and check out
+      that <span id="catSpan">CAT</span>alog!
+    </p>
+  </div>
 </div>
