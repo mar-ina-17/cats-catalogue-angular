@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Cat } from 'src/app/services/models';
-import { User } from 'src/app/services/models/user.class';
+import { Cat } from '../../services/models';
+import { User } from '../../services/models';
 import { HttpService } from '../../services/http/http.service';
 import { SessionService } from '../../services/session/session.service';
 

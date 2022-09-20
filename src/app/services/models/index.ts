@@ -1,3 +1,3 @@
 import Cat from './cat';
-
-export { Cat };
+import { User } from './user';
+export { Cat, User };
