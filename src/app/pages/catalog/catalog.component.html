@@ -1,9 +1,20 @@
 <app-navbar></app-navbar>
-<div>
-  <div *ngIf="!isReady">
+<div class="bootstraped">
+  <div *ngIf="!isReady" class="centerClass">
     <p-progressSpinner></p-progressSpinner>
   </div>
-  <div *ngFor="let cat of cats">
-    <p>{{ cat.id }}</p>
+  <div class="grid-container" *ngIf="isReady">
+    <div class="userCol">
+      <p-card
+        [style]="{ backgroundColor: 'var(--green-100)' }"
+        header="{{ user.firstName }} {{ user.lastName }}"
+        subheader="{{ user.phone }}"
+      >
+        <h4>username: {{ user.username }}</h4>
+      </p-card>
+    </div>
+    <div *ngFor="let cat of cats">
+      <app-catcard [cat]="cat"></app-catcard>
+    </div>
   </div>
 </div>

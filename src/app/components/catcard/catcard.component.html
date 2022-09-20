@@ -1,0 +1,13 @@
+<p-card
+  subheader="ID: {{ cat.id }}"
+  [style]="{
+    width: '300px',
+    height: '250px',
+    backgroundColor: 'var(--green-50)'
+  }"
+  styleClass="p-card-shadow"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" [src]="cat.url" width="250" height="200" />
+  </ng-template>
+</p-card>

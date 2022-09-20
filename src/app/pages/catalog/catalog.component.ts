@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { SessionService } from '../../services/session/session.service';
-import { HttpService } from '../../services/http/http.service';
 import { Cat } from 'src/app/services/models';
+import { User } from 'src/app/services/user/user.class';
+import { HttpService } from '../../services/http/http.service';
+import { SessionService } from '../../services/session/session.service';
+
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -12,6 +14,7 @@ import { Cat } from 'src/app/services/models';
 export class CatalogComponent implements OnInit {
   public isReady: boolean = false;
   public cats: Cat[] = [];
+  public user: User;
 
   constructor(
     private router: Router,
@@ -23,6 +26,7 @@ export class CatalogComponent implements OnInit {
     if (!this.sessionService.existsActiveSession()) {
       this.router.navigate(['/']);
     }
+    this.user = this.sessionService.session.sessionUser;
 
     this.http.callAPI().subscribe((response: Cat[]) => {
       this.cats = response;

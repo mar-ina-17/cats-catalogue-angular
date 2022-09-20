@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
+import { SessionService } from '../../services/session/session.service';
 import { User } from '../../services/user/user.class';
 import { UsersService } from '../../services/user/user.service';
-import { SessionService } from '../../services/session/session.service';
 
 @Component({
   selector: 'app-login',

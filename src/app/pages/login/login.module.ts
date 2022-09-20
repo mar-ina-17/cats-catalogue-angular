@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
-import {CardModule } from 'primeng/card';
-
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
@@ -21,7 +20,7 @@ import { LoginComponent } from './login.component';
     PasswordModule,
     ButtonModule,
     LoginRoutingModule,
-    CardModule
+    CardModule,
   ],
 })
 export class LoginModule {}
