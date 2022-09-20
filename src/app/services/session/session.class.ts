@@ -1,4 +1,4 @@
-import { User } from '../user/user.class';
+import { User } from '../models/user.class';
 
 const randomString = (length: number) => {
   var randomChars =

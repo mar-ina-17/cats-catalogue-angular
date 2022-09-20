@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../user/user.class';
+import { User } from '../models/user.class';
 import { Session } from './session.class';
 
 @Injectable({
