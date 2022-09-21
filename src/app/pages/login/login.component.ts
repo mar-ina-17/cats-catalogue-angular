@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
         this.loginForm.value.password
       );
       this.sessionService.createNewSession(this.currentUser);
-      this.router.navigate(['/catalog', this.sessionService.session.sessionId]);
+      this.router.navigate(['/catalog']);
     } else {
       this.message = 'This user is NOT registered.';
       this.loginForm.reset();

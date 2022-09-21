@@ -20,7 +20,7 @@ const routes: Routes = [
       import('./pages/register/register.module').then((m) => m.RegisterModule),
   },
   {
-    path: 'catalog/:key',
+    path: 'catalog',
     loadChildren: () =>
       import('./pages/catalog/catalog.module').then((m) => m.CatalogModule),
     canActivate: [AuthGuard],
